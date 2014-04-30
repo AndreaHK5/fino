@@ -31,7 +31,11 @@ describe WordMatrix do
 		@wordtable.is_prefix?(prefix1).must_equal true
 		@wordtable.is_prefix?(prefix2).must_equal false
 		@wordtable.is_prefix?(prefix3).must_equal true
+	end
 
+	it "outputs all the words" do
+
+		@wordtable.output_words.must_equal ["art", "hut"]
 
 	end
 

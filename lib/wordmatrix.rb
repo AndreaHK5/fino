@@ -16,6 +16,18 @@ class WordMatrix
 		check_prefix prefix
 	end
 
+	def output_words
+		output = []
+		dictionary.each do |word|
+			if is_valid_word?(word)
+				output << word
+			end
+		end
+
+		output
+
+	end
+
 	private
 
 
