@@ -23,9 +23,7 @@ class WordMatrix
 				output << word
 			end
 		end
-
 		output
-
 	end
 
 	private

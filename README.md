@@ -1,5 +1,5 @@
 #### Exercise at Fino Consulting
 
-4 30 2014
+TDD implementation of dictionary and letter matrix problem.
 
-Work in progress
+4 30 2014
