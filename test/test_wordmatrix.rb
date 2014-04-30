@@ -5,7 +5,7 @@ require 'minitest/autorun'
 describe WordMatrix do
 	before :each do
 		@args = {}
-		@args[:dictionary] = {art: "", hut: "", nut: ""}
+		@args[:dictionary] = ["art", "hut", "nut"]
 		@line1 = ['r','t','t'] 
 		@line2 = ['a','y','u']
 		@line3 = ['i','n','h']
@@ -15,12 +15,23 @@ describe WordMatrix do
 	end
 	
 	it "responds to is word" do
-		true
+		word1 = 'art'
+		word2 = 'any'
+		word3 = 'nut'
+		@wordtable.is_valid_word?(word1).must_equal true
+		@wordtable.is_valid_word?(word2).must_equal false
 
 	end
 
 	it 'responds to is prefix' do
-		true
+		# prefix1 = 'hu'
+		# prefix2 = 'hut'
+		# prefix3 = 'n'
+
+		# @wordtable.is_prefix?(prefix1).must_equal true
+		# @wordtable.is_prefix?(prefix2).must_equal false
+		# @wordtable.is_prefix?(prefix3).must_equal true
+
 
 	end
 
