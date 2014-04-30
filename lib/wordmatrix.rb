@@ -21,17 +21,38 @@ class WordMatrix
 
 
 	def check_prefix prefix
-		is_prefix_full_word?(prefix)
-		table_contains?(prefix)
+		if is_prefix_full_word?(prefix)
+			return false
+		else
+			table_contains? prefix
+		end
+
 	end
 
+
+	def is_prefix_full_word? prefix
+
+		if @dictionary.include?(prefix)
+			return true
+		else
+			return false
+		end
+
+	end
+
+
 	def table_contains? word
+
 		word_array = word.split("")
 		letter = word_array[0]
+
 		position = contains_first_letter?(letter)
+
 		if position == false
 			return false
 		end
+
+
 
 		i = 1
 
@@ -65,15 +86,21 @@ class WordMatrix
 
 		j = 0
 		k = 0
-		while j <= @table.column_count do
-			while k <= @table.row_count do
+
+
+		while j < @table.column_count do
+
+			while k < @table.row_count do
+
 				if table[j,k] == letter	
 					return [j,k]
 				end
-					j += 1
+				k += 1
 			end
-			k += 1
+			k = 0
+			j += 1
 		end
+
 
 		return false
 	end

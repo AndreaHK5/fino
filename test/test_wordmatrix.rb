@@ -24,13 +24,13 @@ describe WordMatrix do
 	end
 
 	it 'responds to is prefix' do
-		# prefix1 = 'hu'
-		# prefix2 = 'hut'
-		# prefix3 = 'n'
+		prefix1 = 'hu'
+		prefix2 = 'hut'
+		prefix3 = 'n'
 
-		# @wordtable.is_prefix?(prefix1).must_equal true
-		# @wordtable.is_prefix?(prefix2).must_equal false
-		# @wordtable.is_prefix?(prefix3).must_equal true
+		@wordtable.is_prefix?(prefix1).must_equal true
+		@wordtable.is_prefix?(prefix2).must_equal false
+		@wordtable.is_prefix?(prefix3).must_equal true
 
 
 	end
